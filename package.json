@@ -1,0 +1,23 @@
+{
+  "name": "js-witchcraft",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/i-m-panda/node-js-witchcraft#readme",
+  "bugs": {
+    "url": "https://github.com/i-m-panda/node-js-witchcraft/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-m-panda/node-js-witchcraft.git"
+  },
+  "license": "MIT",
+  "author": "Abhishek Singh",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "figlet": "^1.11.4"
+  }
+}
