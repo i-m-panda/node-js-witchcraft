@@ -9,6 +9,8 @@
 
 > This allows Node.js to handle thousands of concurrent connections with a single server without introducing the burden of managing thread concurrency, which could be a significant source of bugs.
 
+## How much JavaScript do you need to know to use Node.js? : https://nodejs.org/learn/getting-started/how-much-javascript-do-you-need-to-know-to-use-nodejs#how-much-javascript-do-you-need-to-know-to-use-nodejs
+
 ## Installing node js
 1. Go to the official Node.js Download Page.
 2. Download and run the LTS (Long Term Support) installer for your computer.
