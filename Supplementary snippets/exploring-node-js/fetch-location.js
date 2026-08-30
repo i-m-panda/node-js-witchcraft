@@ -15,6 +15,9 @@ try {
         throw new Error(`HTTP error! Search Status: ${searchResponse.status}`);
     }
     const [searchResponseData] = await searchResponse.json();
+    if (!searchResponseData) {
+        throw new Error(`No location found for: ${city}`);
+    }
     const { lat: latitude, lon: longitude } = searchResponseData;
 
     const reverseSearchResponse = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&zoom=10&format=jsonv2`, {
