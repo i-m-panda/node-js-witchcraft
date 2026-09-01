@@ -24,7 +24,7 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model("User", userSchema);
 ```
 
-Review `src/models/user-model.js` in `Supplementary snippets/example-api`.
+Review `src/models/user-model.js` in `supplementary-snippets/example-api`.
 The example also stores a password hash, a role, and timestamps. The explicit
 `collection: "users"` option means this model reads and writes the `users`
 collection. Without it, Mongoose would infer the same name by pluralizing the

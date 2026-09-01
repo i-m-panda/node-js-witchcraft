@@ -1,27 +1,27 @@
 A major use case of node js is to create web server. And it's extremely easy to create one with node js.
 
-## Example of a simple server: `Supplementary snippets/webserver/simple-server.js`
+## Example of a simple server: `supplementary-snippets/webserver/simple-server.js`
 
 ## Use express
 > Fast, unopinionated, minimalist web framework for Node.js
-Review `express-server.js` in `Supplementary snippets/webserver` for a simple Express server.
+Review `express-server.js` in `supplementary-snippets/webserver` for a simple Express server.
 Review `simple-server.js` for the same idea using Node's built-in `node:http` module.
-You can serve more than text, review `serve-html-json.js` in `Supplementary snippets/webserver`
+You can serve more than text, review `serve-html-json.js` in `supplementary-snippets/webserver`
 
 ## Serving static assets
 you can serve up a whole folder containing HTML,CSS,JS and what not using node js and it's fairly easy to do\
-review `serve-static` in `Supplementary snippets/webserver` to again understanding on how to do that
+review `serve-static` in `supplementary-snippets/webserver` to again understanding on how to do that
 
 ## Dynamic rendring
 for dynamic rendring you can use server side rendring solutions like EJS or Pug or more Sophisticated next.js
 
 ## REST APIs using node
-So with node js REST API can be easily build and scaled\
+So with node js REST API can be easily build and scaled
 ### REST architecture 👇
 GET    to fetch a resource\
 POST   to create a resource\
 PUT    to update a resource\
-DELETE to delete a resource\
+DELETE to delete a resource
 
 To be able to perform above action API needs data from the user, and there are several ways to get data in API endpoint
 

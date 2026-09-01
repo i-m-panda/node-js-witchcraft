@@ -40,7 +40,7 @@ for the next function to run.
 
 # Validation middleware
 Validation checks input before the controller or service receives it. Review
-`src/middleware/validate.js` in `Supplementary snippets/example-api`.
+`src/middleware/validate.js` in `supplementary-snippets/example-api`.
 
 ```js
 export function validateUser(req, res, next) {

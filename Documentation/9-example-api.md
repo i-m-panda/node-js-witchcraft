@@ -3,7 +3,7 @@ The goal is a small users API. Build it one step at a time and keep each layer
 responsible for one kind of work. The database layer uses Mongoose models and a
 repository so the HTTP layer does not depend directly on MongoDB.
 
-The complete runnable example is in `Supplementary snippets/example-api`. Read
+The complete runnable example is in `supplementary-snippets/example-api`. Read
 the lesson first, then run `npm install` and `npm test` from that folder.
 
 ### Folder Structure:

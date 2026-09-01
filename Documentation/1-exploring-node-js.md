@@ -30,11 +30,11 @@ like `fs, process, https, etc.` or npm modules like `express, axios, etc.`.
 To be able to use these modules you should know how to import modules.
 
 - Import your own code
-  - Check `math.js` and `math-utils.js` in `Supplementary snippets/exploring-node-js`
+  - Check `math.js` and `math-utils.js` in `supplementary-snippets/exploring-node-js`
 - Import an npm module
-  - Check `console-says.js` in `Supplementary snippets/exploring-node-js`
+  - Check `console-says.js` in `supplementary-snippets/exploring-node-js`
 - Import built nodejs libs
-  - Check `says-hi.js` in `Supplementary snippets/exploring-node-js`
+  - Check `says-hi.js` in `supplementary-snippets/exploring-node-js`
 
 To be able to use external dependencies like figlet you'll need to initialize npm by running `npm init`, npm is node package manager btw.
 ### There are different kind of dependencies that you can use in a project, read more at: https://medium.com/javascript-in-plain-english/what-the-dependency-types-of-dependencies-in-a-node-js-application-explained-904a5424fbd3
@@ -125,7 +125,7 @@ Use this when a file only exports one main thing (like a single configuration ob
 Simplest way to get user arguments in node js script is using command line arguments.  
 When you run a Node.js application, terminal inputs are captured in a global array called process.argv. The first two slots of this array are automatically reserved: index 0 holds the path to the Node.js binary, and index 1 holds the path to your executed script. Every item listed after these first two represents a custom command-line argument passed into your app.  
 
-Example: running `node Supplementary\ snippets/exploring-node-js/math-with-args.js 4 5` should yeild `9`
+Example: running `node supplementary-snippets/exploring-node-js/math-with-args.js 4 5` should yeild `9`
 
 ## Debugging Node js
 There are several ways to go about it, you can definetly use console.log or other console statements to understand what's going on, but more sophisticated way would be to use node debugger. To debug a script you can use: `node inspect <FILE_PATH>` after that head over to `chrome://inspect` in your Chrome browser to see your available debugging targets. Just click `"inspect"` next to your Node.js process, and the familiar `Chrome DevTools window` will pop right open. You can add `debugger` statement in code to add `breakpoints`
@@ -133,16 +133,16 @@ There are several ways to go about it, you can definetly use console.log or othe
 ## File operations and making external APIs requests
 ### File Ops
 - Read a File
-  - Review `read-file.js` in `Supplementary snippets/exploring-node-js`
+  - Review `read-file.js` in `supplementary-snippets/exploring-node-js`
 - Write a File
-  - Review `write-file.js` in `Supplementary snippets/exploring-node-js`
+  - Review `write-file.js` in `supplementary-snippets/exploring-node-js`
 - Append to a File
-  - Review `append-file.js` in `Supplementary snippets/exploring-node-js`
+  - Review `append-file.js` in `supplementary-snippets/exploring-node-js`
 - Delete (Unlink) a File
-  - Review `delete-file.js` in `Supplementary snippets/exploring-node-js`
+  - Review `delete-file.js` in `supplementary-snippets/exploring-node-js`
 - Check if a File Exists
-  - Review `check-file-exists.js` in `Supplementar snippets/exploring-node-js`
+  - Review `check-file-exists.js` in `supplementary-snippets/exploring-node-js`
 
 ### Making an external request
 Go with native fetch method or got(3rd party robust npm package for making request) __**both supports await**__\
-Review `fetch-location.js` in `Supplementar snippets/exploring-node-js`
+Review `fetch-location.js` in `supplementary-snippets/exploring-node-js`

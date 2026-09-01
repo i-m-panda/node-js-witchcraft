@@ -19,7 +19,7 @@ MONGODB_DATABASE=<DATABASE_NAME>
 MONGODB_COLLECTION=<COLLECTION_NAME>
 ```
 
-- Review `init-connection.js` in `Supplementary snippets/mongodb`.
+- Review `init-connection.js` in `supplementary-snippets/mongodb`.
 
 ```js
 import "dotenv/config";
