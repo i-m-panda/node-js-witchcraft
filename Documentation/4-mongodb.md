@@ -19,7 +19,7 @@ MONGODB_DATABASE=<DATABASE_NAME>
 MONGODB_COLLECTION=<COLLECTION_NAME>
 ```
 
-- Review `init-connection.js` in `supplementary-snippets/mongodb`.
+- Review [init-connection.js](../supplementary-snippets/mongodb/init-connection.js).
 
 ```js
 import "dotenv/config";
@@ -36,7 +36,7 @@ The client should normally be created once and shared by the application. Add a
 health check and close the client during graceful shutdown.
 
 # CRUD operations
-Review `db-crud.js` for the basic operations:
+Review [db-crud.js](../supplementary-snippets/mongodb/db-crud.js) for the basic operations:
 
 - `insertOne` and `insertMany` create documents.
 - `findOne` and `find({}).toArray()` read documents.

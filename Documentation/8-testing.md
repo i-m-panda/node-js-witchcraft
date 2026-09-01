@@ -23,7 +23,7 @@ npm run test:coverage
 ```
 
 # Unit test example
-Review `tests/math-utils.test.js`:
+Review [tests/math-utils.test.js](../supplementary-snippets/exploring-node-js/math-utils.test.js):
 
 ```js
 import { sum } from "../supplementary-snippets/exploring-node-js/math-utils.js";

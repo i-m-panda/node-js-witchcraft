@@ -1,16 +1,17 @@
 A major use case of node js is to create web server. And it's extremely easy to create one with node js.
 
-## Example of a simple server: `supplementary-snippets/webserver/simple-server.js`
+## Example of a simple server
+See [simple-server.js](../supplementary-snippets/webserver/simple-server.js)
 
 ## Use express
 > Fast, unopinionated, minimalist web framework for Node.js
-Review `express-server.js` in `supplementary-snippets/webserver` for a simple Express server.
-Review `simple-server.js` for the same idea using Node's built-in `node:http` module.
-You can serve more than text, review `serve-html-json.js` in `supplementary-snippets/webserver`
+Review [express-server.js](../supplementary-snippets/webserver/express-server.js) for a simple Express server.
+Review [simple-server.js](../supplementary-snippets/webserver/simple-server.js) for the same idea using Node's built-in `node:http` module.
+You can serve more than text, review [serve-html-json.js](../supplementary-snippets/webserver/serve-html-json.js)
 
 ## Serving static assets
 you can serve up a whole folder containing HTML,CSS,JS and what not using node js and it's fairly easy to do\
-review `serve-static` in `supplementary-snippets/webserver` to again understanding on how to do that
+review [serve-static.js](../supplementary-snippets/webserver/serve-static.js) to get understanding on how to do that
 
 ## Dynamic rendring
 for dynamic rendring you can use server side rendring solutions like EJS or Pug or more Sophisticated next.js

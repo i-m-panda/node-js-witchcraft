@@ -40,7 +40,7 @@ for the next function to run.
 
 # Validation middleware
 Validation checks input before the controller or service receives it. Review
-`src/middleware/validate.js` in `supplementary-snippets/example-api`.
+[src/middleware/validate.js](../supplementary-snippets/example-api/src/middleware/validate.js).
 
 ```js
 export function validateUser(req, res, next) {
@@ -65,7 +65,7 @@ req.user = await userService.getById(userId);
 next();
 ```
 
-Review `src/middleware/auth.js`. `requireAuth` returns `401` when credentials
+Review [src/middleware/auth.js](../supplementary-snippets/example-api/src/middleware/auth.js). `requireAuth` returns `401` when credentials
 are missing or invalid. `requireOwnerOrAdmin` returns `403` when the signed-in
 user is not allowed to access the resource.
 
