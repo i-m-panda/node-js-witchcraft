@@ -1,14 +1,14 @@
-# Let's create an example API using what we have learned so far
+# Let's create a user API using what we have learned so far
 The goal is a small users API. Build it one step at a time and keep each layer
 responsible for one kind of work. The database layer uses Mongoose models and a
 repository so the HTTP layer does not depend directly on MongoDB.
 
-The complete runnable example is in [supplementary-snippets/example-api](../supplementary-snippets/example-api/). Read
+The complete runnable example is in [supplementary-snippets/user-api](../supplementary-snippets/user-api/). Read
 the lesson first, then run `npm install` and `npm test` from that folder.
 
 ### Folder Structure:
 ```
-example-api/
+user-api/
 │
 ├── src/
 │   ├── app.js

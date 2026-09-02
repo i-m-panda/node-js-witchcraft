@@ -19,7 +19,7 @@ A short, practical Node.js curriculum for upskilling.
 6. [Authentication and authorization](Documentation/6-authentication-authorization.md) - passwords, sessions, tokens, roles, and security.
 7. [File upload](Documentation/7-file-upload.md) - multipart requests, limits, validation, and storage.
 8. [Testing with Jest](Documentation/8-testing.md) - unit, request, database, authentication, and authorization tests
-9. [Example API](Documentation/9-example-api.md) - combine the lessons into a small users API.
+9. [User API](Documentation/9-user-api.md) - combine the lessons into a small users API.
 10. [Next steps](Documentation/10-next-steps.md) - process, streams, WebSockets, scaling, queues, observability, and deployment.
 11. [Appendix](Documentation/appendix.md) - supplementary documentation, guides, tools, and standards.
 
@@ -31,7 +31,7 @@ npm run test:watch
 ```
 
 The supplementary snippets are deliberately small. Read the matching lesson
-first, run the snippet, then change one thing and run it again. The example API
+first, run the snippet, then change one thing and run it again. The user API
 is complete when it has environment configuration, validation, error handling,
 authentication, tests, and a health endpoint.
 
@@ -39,5 +39,5 @@ Never commit `.env` files or real credentials.
 
 ## After the curriculum
 
-Complete the example API first, then use [Next steps](Documentation/10-next-steps.md)
+Complete the user API first, then use [Next steps](Documentation/10-next-steps.md)
 to choose the next topic based on a real problem in the application.

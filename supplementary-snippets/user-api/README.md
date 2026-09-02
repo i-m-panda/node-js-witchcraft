@@ -1,4 +1,4 @@
-# Example API
+# User API
 
 This is a small users API that combines the Node.js curriculum into one
 independent project.

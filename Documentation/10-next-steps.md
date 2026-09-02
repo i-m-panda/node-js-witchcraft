@@ -13,7 +13,7 @@ configuration, handles signals, and exits.
 - Use exit codes for command-line programs.
 - Inspect memory and CPU with `process.memoryUsage()` and `process.cpuUsage()`.
 
-The example API already uses environment configuration and graceful shutdown.
+The user API already uses environment configuration and graceful shutdown.
 Extend it with a health check that reports whether required dependencies are
 available.
 

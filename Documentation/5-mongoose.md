@@ -24,14 +24,14 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model("User", userSchema);
 ```
 
-Review [src/models/user-model.js](../supplementary-snippets/example-api/src/models/user-model.js).
+Review [src/models/user-model.js](../supplementary-snippets/user-api/src/models/user-model.js).
 The example also stores a password hash, a role, and timestamps. The explicit
 `collection: "users"` option means this model reads and writes the `users`
 collection. Without it, Mongoose would infer the same name by pluralizing the
 `User` model name.
 
 # Connect to MongoDB
-Review [src/config/database.js](../supplementary-snippets/example-api/src/config/database.js):
+Review [src/config/database.js](../supplementary-snippets/user-api/src/config/database.js):
 
 ```js
 await mongoose.connect(process.env.MONGODB_URL, {

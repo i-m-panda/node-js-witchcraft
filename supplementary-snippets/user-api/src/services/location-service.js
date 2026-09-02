@@ -4,7 +4,7 @@ export function createLocationService(fetchLocation = fetch) {
             const response = await fetchLocation(
                 `https://nominatim.openstreetmap.org/search?format=jsonv2&q=${encodeURIComponent(city)}`,
                 {
-                    headers: { "User-Agent": "node-js-witchcraft-example-api" },
+                    headers: { "User-Agent": "node-js-witchcraft-user-api" },
                     signal: AbortSignal.timeout(5000),
                 },
             );
