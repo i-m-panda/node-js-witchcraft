@@ -18,6 +18,7 @@ for dynamic rendring you can use server side rendring solutions like EJS or Pug 
 
 ## REST APIs using node
 So with node js REST API can be easily build and scaled
+
 ### REST architecture 👇
 GET    to fetch a resource\
 POST   to create a resource\
@@ -199,3 +200,24 @@ HTTP Request
         getUserById
     }
     ```
+
+### Minimal location API
+See [location-api](../supplementary-snippets/webserver/location-api/) for a
+small API that accepts a city and returns its latitude and longitude. Its
+request flow is:
+
+```
+HTTP Request -> Route -> Middleware -> Controller -> Service -> Repository -> API
+```
+
+Try it with:
+
+```sh
+cd supplementary-snippets/webserver/location-api
+npm install
+npm start
+curl "http://localhost:3000/location?city=Berlin"
+```
+
+The repository calls the OpenStreetMap Nominatim API, keeping the external API
+details out of the controller.
