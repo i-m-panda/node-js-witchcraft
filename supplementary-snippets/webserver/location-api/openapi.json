@@ -1,0 +1,73 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Node.js Witchcraft Location API",
+    "version": "1.0.0",
+    "description": "A city-to-coordinates API backed by OpenStreetMap Nominatim. Import this file into Postman to create a ready-to-run collection."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Local location API"
+    }
+  ],
+  "tags": [{ "name": "Location" }],
+  "paths": {
+    "/location": {
+      "get": {
+        "tags": ["Location"],
+        "summary": "Find coordinates for a city",
+        "operationId": "getCoordinates",
+        "parameters": [
+          {
+            "name": "city",
+            "in": "query",
+            "required": true,
+            "description": "City name to look up",
+            "schema": { "type": "string", "example": "Berlin" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Coordinates returned",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Coordinates" },
+                "example": { "latitude": 52.5174, "longitude": 13.3951 }
+              }
+            }
+          },
+          "400": {
+            "description": "The city query parameter is missing",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" }, "example": { "error": "city query parameter is required" } } }
+          },
+          "404": {
+            "description": "No matching city was found",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" }, "example": { "error": "City not found" } } }
+          },
+          "502": {
+            "description": "The external location service is unavailable",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" }, "example": { "error": "Location API unavailable" } } }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Coordinates": {
+        "type": "object",
+        "required": ["latitude", "longitude"],
+        "properties": {
+          "latitude": { "type": "number", "format": "double", "example": 52.5174 },
+          "longitude": { "type": "number", "format": "double", "example": 13.3951 }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "required": ["error"],
+        "properties": { "error": { "type": "string" } }
+      }
+    }
+  }
+}

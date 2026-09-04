@@ -25,6 +25,35 @@ Two common approaches are:
   httpOnly cookie.
 - Access tokens: the client sends a short-lived token in the `Authorization`
   header, usually as `Bearer <token>`.
+  - JSON Web Tokens (JWTs): the server signs a token containing claims such as
+    the user's id and role. The client sends it in the `Authorization` header as
+    `Bearer <token>`, and authentication middleware verifies the signature and
+    expiry before allowing access to a protected route.
+
+JWTs are readable by whoever possesses them, so do not put passwords or other
+secrets in their claims. Use a strong signing secret or private key, keep
+access tokens short-lived, and reject tokens with an invalid signature or
+expired `exp` claim. Because a JWT is commonly self-contained, add refresh and
+revocation handling when the API needs to end access before expiry.
+
+```js
+import jwt from "jsonwebtoken";
+
+function requireAuth(req, res, next) {
+	const [scheme, token] = (req.headers.authorization || "").split(" ");
+
+	if (scheme !== "Bearer" || !token) {
+		return res.status(401).json({ error: "Unauthorized" });
+	}
+
+	try {
+		req.user = jwt.verify(token, process.env.JWT_SECRET);
+		next();
+	} catch {
+		return res.status(401).json({ error: "Unauthorized" });
+	}
+}
+```
 
 Choose one approach for your project and use important approaches like token expiry, logout, refresh,
 and revocation to keep everything safe and secure. Do not put secrets in source control or in browser-readable storage when a secure cookie is appropriate.

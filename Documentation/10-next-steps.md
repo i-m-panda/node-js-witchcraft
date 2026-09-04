@@ -17,6 +17,31 @@ The user API already uses environment configuration and graceful shutdown.
 Extend it with a health check that reports whether required dependencies are
 available.
 
+## The event loop
+Node.js uses an event loop to coordinate JavaScript execution and asynchronous
+I/O. Learn how callbacks, promises, timers, and I/O callbacks are scheduled,
+and why CPU-heavy synchronous work can delay every request in the process.
+
+- Keep request handlers non-blocking whenever possible.
+- Recognize the difference between synchronous and asynchronous APIs.
+- Use `setImmediate()` and `queueMicrotask()` deliberately when scheduling work.
+- Measure event-loop delay when investigating slow responses.
+- Move CPU-heavy work to worker threads or background jobs instead of blocking
+  the event loop.
+
+## TypeScript with Node.js
+TypeScript adds static types to Node.js applications and can make APIs,
+configuration, database models, and service boundaries easier to maintain.
+
+- Define types for request data, responses, configuration, and errors.
+- Use a strict `tsconfig.json` and validate external input at runtime because
+  TypeScript types are removed when the application runs.
+- Learn the difference between compiling TypeScript and running it with a
+  development tool such as a loader or bundler.
+- Keep the build output separate from source files and run the compiled
+  JavaScript in production.
+- Add type checking to the same CI checks as tests and linting.
+
 ## Streams
 Streams process data piece by piece instead of loading everything into memory.
 They are useful for large files, uploads, downloads, and network responses.
@@ -82,11 +107,13 @@ and restore procedures, dependency scanning, CI checks, and a rollback plan.
 
 ## Suggested order
 1. Process, signals, and graceful shutdown.
-2. Streams and safe large-file handling.
-3. WebSockets and real-time messages.
-4. Worker threads for CPU-heavy tasks.
-5. Multiple processes, containers, and load balancing.
-6. Queues, caching, observability, and deployment.
+2. The event loop and non-blocking application design.
+3. TypeScript with Node.js.
+4. Streams and safe large-file handling.
+5. WebSockets and real-time messages.
+6. Worker threads for CPU-heavy tasks.
+7. Multiple processes, containers, and load balancing.
+8. Queues, caching, observability, and deployment.
 
 Choose the next topic based on a real problem in the application. Do not
 add clustering or WebSockets until the application needs them.

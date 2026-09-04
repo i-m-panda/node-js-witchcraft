@@ -30,6 +30,13 @@ npm start
 
 The API is available at `http://localhost:3000`.
 
+## Import into Postman
+
+Import [openapi.json](openapi.json) in Postman using **Import > File**. Postman
+will create requests for every endpoint and use `http://localhost:3000` as the
+base URL. Run `POST /auth/login`, then use its returned token as the Bearer
+token for the protected user requests.
+
 ## Run tests
 
 ```sh

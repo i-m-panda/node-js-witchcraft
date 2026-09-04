@@ -221,3 +221,15 @@ curl "http://localhost:3000/location?city=Berlin"
 
 The repository calls the OpenStreetMap Nominatim API, keeping the external API
 details out of the controller.
+
+### Import the location API into Postman
+
+The standalone location API is in
+[supplementary-snippets/webserver/location-api](../supplementary-snippets/webserver/location-api/).
+Start it with `npm install` and `npm start`, then import its
+[openapi.json](../supplementary-snippets/webserver/location-api/openapi.json)
+in Postman using **Import > File**. The generated request uses
+`GET http://localhost:3000/location?city=Berlin` as its example.
+
+The combined user API has a separate OpenAPI document at
+[supplementary-snippets/user-api/openapi.json](../supplementary-snippets/user-api/openapi.json).
